@@ -1,0 +1,7 @@
+https://kubernetes.io/es/docs/concepts/workloads/controllers/deployment/
+https://hub.docker.com/_/mongo
+https://kubernetes.io/es/docs/concepts/services-networking/service/
+https://hub.docker.com/_/mongo-express
+https://kubernetes.io/es/docs/concepts/workloads/controllers/deployment/
+https://learnk8s.io/kubernetes-rollbacks
+

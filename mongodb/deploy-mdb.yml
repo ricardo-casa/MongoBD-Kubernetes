@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  annotations:
+    deployment.kubernetes.io/desired-replicas: "5"
+    deployment.kubernetes.io/max-replicas: "7"
+    deployment.kubernetes.io/revision: "2"
+  creationTimestamp: "2022-06-02T12:19:22Z"
+  generation: 2
+  labels:
+    app: mongodb
+    pod-template-hash: 7bb6c6c4c7
+  name: mongodb-deployment-7bb6c6c4c7
+  namespace: default
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Deployment
+    name: mongodb-deployment
+    uid: 6d27d810-8106-40b9-b3d4-0d59779651ac
+  resourceVersion: "25998"
+  uid: 54d098f5-8be2-4317-a736-862d65514bd3
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: mongodb
+      pod-template-hash: 7bb6c6c4c7
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: mongodb
+        pod-template-hash: 7bb6c6c4c7
+    spec:
+      containers:
+      - env:
+        - name: MONGO_INITDB_ROOT_USERNAME
+          valueFrom:
+            secretKeyRef:
+              key: mongo-root-username
+              name: mongodb-secret
+        - name: MONGO_INITDB_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              key: mongo-root-password
+              name: mongodb-secret
+        image: mongo
+        imagePullPolicy: Always
+        name: mongodb
+        ports:
+        - containerPort: 27017
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status:
+  availableReplicas: 5
+  fullyLabeledReplicas: 5
+  observedGeneration: 2
+  readyReplicas: 5
+  replicas: 5

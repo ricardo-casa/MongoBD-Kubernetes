@@ -1,0 +1,31 @@
+Name:           mongodb-deployment-7bb6c6c4c7
+Namespace:      default
+Selector:       app=mongodb,pod-template-hash=7bb6c6c4c7
+Labels:         app=mongodb
+                pod-template-hash=7bb6c6c4c7
+Annotations:    deployment.kubernetes.io/desired-replicas: 5
+                deployment.kubernetes.io/max-replicas: 7
+                deployment.kubernetes.io/revision: 2
+Controlled By:  Deployment/mongodb-deployment
+Replicas:       5 current / 5 desired
+Pods Status:    5 Running / 0 Waiting / 0 Succeeded / 0 Failed
+Pod Template:
+  Labels:  app=mongodb
+           pod-template-hash=7bb6c6c4c7
+  Containers:
+   mongodb:
+    Image:      mongo
+    Port:       27017/TCP
+    Host Port:  0/TCP
+    Environment:
+      MONGO_INITDB_ROOT_USERNAME:  <set to the key 'mongo-root-username' in secret 'mongodb-secret'>  Optional: false
+      MONGO_INITDB_ROOT_PASSWORD:  <set to the key 'mongo-root-password' in secret 'mongodb-secret'>  Optional: false
+    Mounts:                        <none>
+  Volumes:                         <none>
+Events:
+  Type    Reason            Age   From                   Message
+  ----    ------            ----  ----                   -------
+  Normal  SuccessfulCreate  10m   replicaset-controller  Created pod: mongodb-deployment-7bb6c6c4c7-7j6dn
+  Normal  SuccessfulCreate  10m   replicaset-controller  Created pod: mongodb-deployment-7bb6c6c4c7-m44zk
+  Normal  SuccessfulCreate  10m   replicaset-controller  Created pod: mongodb-deployment-7bb6c6c4c7-7w5s5
+  Normal  SuccessfulCreate  10m   replicaset-controller  Created pod: mongodb-deployment-7bb6c6c4c7-jv4c8
