@@ -1,7 +1,11 @@
 https://kubernetes.io/es/docs/concepts/workloads/controllers/deployment/
 https://hub.docker.com/_/mongo
+https://kubernetes.io/es/docs/concepts/configuration/secret/
 https://kubernetes.io/es/docs/concepts/services-networking/service/
+https://www.bluematador.com/blog/safely-removing-pods-from-a-kubernetes-node
 https://hub.docker.com/_/mongo-express
 https://kubernetes.io/es/docs/concepts/workloads/controllers/deployment/
 https://learnk8s.io/kubernetes-rollbacks
+https://bhavyasree.github.io/kubernetes-CKAD/06.edit-pods-deploys/#:~:text=Edit%20a%20POD&text=Run%20the%20kubectl%20edit%20pod,it%2C%20you%20will%20be%20denied.
+https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/
 
